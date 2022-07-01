@@ -1,3 +1,27 @@
 #
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
+ import sys
+ if __name__ == '__main__' :
+    curkey = None
+    To=0 
+   
+    for line in sys.stdin:
+        key, val= line.split("\t")
+        val = int(val)
+        
+        if key == curkey
+          to += curkey
+        else:
+          
+          if curkey is not None:
+            sys.stdout.write("{}\n".format(curkey, total))
+          
+          curkey = key
+          total  = val
+          
+          
+      
+     
+   sys.stdout.write("{}\t{}\n".format(curkey, total))
+        
