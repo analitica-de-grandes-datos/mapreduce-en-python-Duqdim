@@ -3,9 +3,6 @@
 #
 import sys
 
-
-
-
 def clear_spaces(x):
 
     x = x.replace("\n", "")
@@ -14,15 +11,9 @@ def clear_spaces(x):
 
     return x
 
-
-
-
 def purpose_amount(x):
 
     return   clear_spaces(x[0])  + "*" + clear_spaces(x[2])
-
-
-
 
 for line in sys.stdin:
 
