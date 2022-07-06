@@ -2,10 +2,19 @@
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
 import sys
+import operator
 
-for line in sys.stdin:
+if __name__ == '__main__':
 
-    line = line.replace("\n","")
+    dicciona = {}
 
-    if '*' in line:
-        print(line.split("")[1]+ "," +line.split("")[0])
+    for line in sys.stdin:
+
+        key, val = line.split("\t")
+        val = int(val)
+        dicciona[key] = val
+
+    dicciona1 = sorted(diccio.items(), key = operator.itemgetter(1))
+
+    for campo in dicciona1:
+        sys.stdout.write("{},{}\n".format(campo[0], campo[1]))
