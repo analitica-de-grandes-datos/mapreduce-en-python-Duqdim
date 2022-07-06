@@ -1,7 +1,7 @@
 #
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
-mport sys
+import sys
 
 biggest_purposes = []
 
