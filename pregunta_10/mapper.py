@@ -8,5 +8,5 @@ if __name__ == "__main__":
     colum0 = [tab[i][0] for i in range(len(tab))]
     colum1 = [tab[i][1] for i in range(len(tab))]
 
-    for line in range(len(tab)):
-        sys.stdout.write("{}\t{}\n".format(colum0[line],colum1[line]))
+    for lil in range(len(tab)):
+        sys.stdout.write("{}\t{}\n".format(colum0[lil],colum1[lil]))
