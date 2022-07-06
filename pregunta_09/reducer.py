@@ -2,49 +2,21 @@
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
 import sys
+import operator
 
-biggest_purposes = []
+if __name__ == '__main__':
 
-count_elements_col_3 = 0
+    tripletas = []
 
+    for line in sys.stdin:
 
+        key, val1, val2 = line.split(",")
+        val2 = int(val2)
+        tripletas_line = (key, val1, val2)
+        tripletas.append(tripletas_line)
 
-def set_bigger_purpose(array_purposes, actual_element):
-
-    actual_element = actual_element.replace("\n", "")
-
-    biggest_purposes.append(actual_element)
-
-    return array_purposes
-
-
-
-def sortByColumn3(element):
-
-    return int(element.split(";")[0])
-
-
-
-for line in sys.stdin:
-
-    set_bigger_purpose(biggest_purposes, line)
-
-
-
-
-biggest_purposes.sort(key=sortByColumn3)
-
-
-
-
-for purpose in biggest_purposes:
-
-    count_elements_col_3 = count_elements_col_3 + 1
-
-    element = purpose.split(";")
-
-    print(element[1]+ "   " + element[2] + "   " + element [0])
-
-    if count_elements_col_3 > 5:
-
-        break
+    tripletas_ord = sorted(tripletas, key = operator.itemgetter(2))
+    tripletas_ord_reduce = tripletas_ord[0:6]
+    
+    for campo in tripletas_ord_reduce:
+        sys.stdout.write("{}   {}   {}\n".format(campo[0], campo[1], campo[2]))
