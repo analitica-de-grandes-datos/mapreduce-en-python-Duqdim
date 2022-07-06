@@ -3,22 +3,26 @@
 #
 import sys
 
-biggest_purposes = {}
+if __name__ == '__main__':
 
+    curkey = None
+    tot = 0
 
+    for line in sys.stdin:
 
+        key, val = line.split("\t")
+        val = int(val)
 
-def set_bigger_purpose(dictionary_purposes, actual_element):
+        if key == curkey:
 
-    element_array = actual_element.split("*")
+            tot += val
+        else:
 
-    dictionary_purposes[element_array[0]] = int(dictionary_purposes.get(actual_element[0]) or 0) + 1 
+            if curkey is not None:
 
-    return dictionary_purposes
+                sys.stdout.write("{},{}\n".format(curkey, total))
 
+            curkey = key
+            tot = val
 
-
-
-for line in sys.stdin:
-
-    set_bigger_purpose(biggest_purposes, line)
+    sys.stdout.write("{},{}\n".format(curkey, total))
