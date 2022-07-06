@@ -9,5 +9,5 @@ if __name__ == "__main__":
     colum0 = [tab[i][0] for i in range(len(tab))]
     colum2 = [tab[i][2] for i in range(len(tab))]
 
-    for line in range(len(tabla)):
+    for line in range(len(tab)):
         sys.stdout.write("{}\t{}\n".format(colum0[line],colum2[line]))
